@@ -1,0 +1,31 @@
+import React, { useEffect, useState } from 'react'
+import ProductsListHome from '../components/ProductsListHome'
+
+function Home() {
+
+    const [allProducts, setAllProducts] = useState([])
+
+    useEffect(() => {
+       getAllProducts()
+    }, [])
+
+    const getAllProducts = async() => {
+        const api = await fetch('https://fakestoreapi.com/products')
+        const data = await api.json()
+        setAllProducts(data)
+        console.log(data);
+    }
+
+
+
+  return (
+    <div>
+
+    {/* come props gli passo il nome dell'attributo, non il valore */}
+        <ProductsListHome products={allProducts} />
+
+    </div>
+  )
+}
+
+export default Home
