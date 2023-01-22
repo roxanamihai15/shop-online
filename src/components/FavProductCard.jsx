@@ -14,7 +14,7 @@ function FavProductCard({item}) {
     <Col className='mb-5'>
         <div className='product-card-mini p-3 h-100 d-flex flex-column rounded border'>
             <h3>{item.title}</h3>
-            <img src={item.image} alt="" className='d-block mx-auto mt-auto' />  
+            <img src={item.image} alt={item.title} className='d-block mx-auto mt-auto' />  
             {/* <p>{item.description}</p> */}
 
             <div className='ms-auto gap-2 '>
