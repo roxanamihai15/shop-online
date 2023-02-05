@@ -1,12 +1,6 @@
-
 import ProductListFav from "../components/ProductListFav"
 
-
-
 function Favorites() {
-
-  // const {favItems} = useContext(CartContext)
-
 
   return (
     <div>

@@ -1,9 +1,7 @@
 import { Button, Row } from "react-bootstrap"
-
 import { useContext, useEffect } from 'react'
 import CartContext from '../context/CartContext'
 import CartProductCard from "./CartProductCard"
-
 
 function ProductsListCart() {
 
@@ -17,7 +15,6 @@ function ProductsListCart() {
 
   return (
     <div className='container-card'>
-
       <Row xs={1} md={2} lg={3} xxl={4}>
         {cartItems.map((elemento, index) => (
               <CartProductCard
@@ -26,10 +23,8 @@ function ProductsListCart() {
               />
           ))}
       </Row>
-
       <h4 className='text-end mt-5 fw-normal'>Totale:  {total}€ </h4>
-      <Button className="d-block ms-auto mt-3 px-3">Conferma l'ordine</Button>
-        
+      <Button className="d-block ms-auto mt-3 px-3">Conferma l'ordine</Button>        
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import ProductsListHome from '../components/ProductsListHome'
 
 function Home() {
@@ -16,14 +16,9 @@ function Home() {
         console.log(data);
     }
 
-
-
   return (
     <div>
-
-    {/* come props gli passo il nome dell'attributo, non il valore */}
         <ProductsListHome products={allProducts} />
-
     </div>
   )
 }

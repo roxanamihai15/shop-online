@@ -1,5 +1,4 @@
 import { Button, Col } from 'react-bootstrap'
-
 import { useContext } from 'react'
 import CartContext from '../context/CartContext'
 
@@ -25,7 +24,6 @@ function CartProductCard({item}) {
                     
         </div>
     </Col>
-
   )
 }
 

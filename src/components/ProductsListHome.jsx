@@ -1,7 +1,5 @@
-
 import { Row } from "react-bootstrap"
 import HomeProductCard from './HomeProductCard'
-
 
 function ProductsListHome( {products} ) {
   return (

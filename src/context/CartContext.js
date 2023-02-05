@@ -1,23 +1,13 @@
-// 1
 import { createContext, useState } from "react";
 
-// 2
 const CartContext = createContext();
 
-// 4 
-// cosa sto facendo?
-// creo un componente in modo da usarlo in giro
-// ogni cosa che wrapperò dentro a CartContext.Provider avrà accesso ai valori che gli metto:
-// in questo caso value={{ item: 1 }}
-
-// children saranno i componenti o codice jsx che metterò dentro
 export function CartProvider({ children }) {
 
     const [ favItems, setFavItems ] = useState([])
     const [ cartItems, setCartItems ] = useState([])
     const [ numItemsCart, setNumItemsCart ] = useState(0)
  
-
     const addToCart = (product) => {
 
         let alreadyInCartPosition = cartItems.findIndex(
@@ -50,7 +40,6 @@ export function CartProvider({ children }) {
             setFavItems([...favItems]);
         }
     }
-
 
     const updateQuantity = (id, operation) => {
         let alreadyInCartPosition = cartItems.findIndex((el) => el.id === id);
@@ -92,8 +81,6 @@ export function CartProvider({ children }) {
         setTotal(sum.toFixed(2)); 
     };
 
- 
-
     return (
          <CartContext.Provider value={{ cartItems, favItems, addToCart, addToFav, updateQuantity, removeItemFromCart, removeItemFromFav, getTotal, total, numItemsCart }}>
             {children}
@@ -101,5 +88,4 @@ export function CartProvider({ children }) {
     );
 }
 
-// 3
  export default CartContext;

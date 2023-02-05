@@ -2,16 +2,11 @@ import { useContext } from 'react'
 import { NavLink } from "react-router-dom";
 import { Container, Nav, Navbar } from "react-bootstrap"
 import CartContext from '../context/CartContext';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-
-
-
 
 function NavbarComponent() {
 
   const {cartItems} = useContext(CartContext)
   const {favItems} = useContext(CartContext)
-
 
   return (
     <Navbar collapseOnSelect expand="md" bg='dark' variant='dark'>
@@ -30,7 +25,6 @@ function NavbarComponent() {
                     0
                 )
                 }]</Nav.Link>  
-
             </Nav>
           </Navbar.Collapse>
         </Container>

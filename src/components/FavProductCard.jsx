@@ -1,14 +1,10 @@
-import React from 'react'
 import { Button, Col } from 'react-bootstrap'
-
 import { useContext } from 'react'
 import CartContext from '../context/CartContext'
-
 
 function FavProductCard({item}) {
 
   const {removeItemFromFav} = useContext(CartContext)
-
 
   return (
     <Col className='mb-5'>
@@ -19,11 +15,9 @@ function FavProductCard({item}) {
 
             <div className='ms-auto gap-2 '>
                 <Button variant='danger' size='sm' onClick={() => removeItemFromFav(item.id)}>Remove</Button>
-            </div>
-                    
+            </div>                    
         </div>
     </Col>
-
   )
 }
 
